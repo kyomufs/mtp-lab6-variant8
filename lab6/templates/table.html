@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Data table</title>
+  </head>
+  <body>
+    <h1>Data table</h1>
+    {% if not rows %}
+    <p class="empty">No rows to display</p>
+    {% endif %}
+    <table>
+      <thead>
+        <tr>
+          {% for header in headers %}
+          <th>{{ header }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          {% for header in headers %}
+          <td>{{ row[header] }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
