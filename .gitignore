@@ -35,3 +35,8 @@ Thumbs.db
 *.bak
 *.orig
 *.rej
+
+# Local SQLite databases
+*.sqlite3
+*.sqlite
+*.db
